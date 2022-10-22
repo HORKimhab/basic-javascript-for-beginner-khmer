@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Statement, Syntax and Comments</title>
+</head>
+<body>
+    <mark>JS Statement, Syntax and Comments</mark>
+    <h3 id="output"></h3>
+    <p id="output1"></p>
+</body>
+<script>
+    let kh1, kh2, ds; // statement 1 // create variable || var 
+    kh1 = 12, kh2 = 45; // statement 2 // value for var
+    result = kh1 + kh2; // 3 
+    document.getElementById('output').innerHTML = result; 
+    document.getElementById('output1').innerHTML = 
+    "       hello JavaScript"; 
+
+    // Syntax 
+    // JS value 
+    // 1. Fixed value --> Literals
+    // 2. Variable value  --> Refer to declare var 
+
+    // Declare var 
+    // let, var, const 
+
+    /* 
+        A JavaScript name must begin with:
+        - A letter (A-Z or a-z)
+        - A dollar sign ($)
+        - Or an underscore (_)
+    */
+   let $v_1 = 'test'; 
+   console.log($v_1);
+
+   // Var is sensitive 
+   let kh, Kh; 
+   kh = "Hey kh"; 
+   Kh = 'Hey KH'; 
+   console.log(kh + Kh); 
+
+   // Sytle of declare var 
+   // Snake case frist_name 
+   // UpperCase Camel : FirstName
+   // Lowercamel Case : firstName
+   // UpperCase : FIRSTNAME
+
+
+   // Comment: 
+    // This is a single line comment 
+    /* 
+        This is a block comment     
+    */
+</script>
+</html>
