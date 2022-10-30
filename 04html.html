@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - var, let and const</title>
+</head>
+<body>
+    <h4>var,let and const - JavaScript</h4>
+    <script>
+        var log = console.log; 
+
+        /* Global Scope */
+        // window.value is global var too
+        log('---Global Scope--'); 
+        var text = "It's var global"; // Global with var variable 
+        window.txt = "Window txt is var"; // Glbal with window object 
+        log(text); 
+        log(window.txt); 
+
+        /* Function Scope */
+        log('---Function Scope--'); 
+        var ab;
+        let kh; 
+        function func(){
+            let x = 'x:12'; 
+            const y = 'Y is y var'; 
+            ab = 'ab is here'; 
+            kh = 'kh is here'; 
+            console.log(ab);
+            console.log(kh); 
+        }
+        // call function  
+        func(); 
+        
+        /* Block Scope */
+        log('---Block Scope--'); 
+        // {}
+        {
+            let a1 = 'a1 in block scope'; 
+            const a2 = 'a2 in block scope';
+            // const a2 = 'a2 news'; 
+            log(a1); 
+            log(a2); 
+        }
+        // log(a1); is not defined  
+
+        /* Reassign Var */
+        log('---Reassign Var--'); 
+        var v1 = 'V1 is here'; 
+        let v2 = 'v2 is here';
+        log(v1); 
+        log(v2); 
+        // Reassign var 
+        v1 = 'v1 is reassign v1';
+        v2 = 'v2 is reassign'; 
+        log(v1);
+        log(v2); 
+
+        /* Redeclare Var */
+        log('---Redeclare Var--'); 
+        var v3 = 'v3 is first'; 
+        var v3 = 'v3 is second'; 
+        let v4 = 'v4 with let'; 
+        // var v4 = 'v4 with var'; // had declare 
+        log(v4); 
+        log(v3); 
+
+        /*  Hoisting or Hoisted
+            Hoisted means 'you can use the variable before it is declared'
+        */
+       log('---Hoisted | Hoisting--'); 
+       v22 = 'v22 is here'; 
+       var v22; 
+       log(v22);
+
+       v24 = 'v22 is here'; 
+    //    let v24; 
+    //    log(v24);  
+
+       /* More with const var */
+       log('More with const var');
+       /*   when to use with const 
+            - a new array
+            - a new object 
+            - a new function 
+            - a new RegExp
+       */
+    
+    </script>
+</body>
+</html>
