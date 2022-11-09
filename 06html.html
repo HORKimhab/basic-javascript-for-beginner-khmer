@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Operator</title>
+</head>
+<body>
+    <h3>JavaScript Assignment</h3>
+    <p id="output1"></p>
+</body>
+<script>
+    const log = console.log; 
+    const doc = document; 
+    var a1 = 3; 
+    let a2 = 22 + a1; // Simple assignment 
+    a1 **= 2;  // a1 = 3 ** 2 
+    log(a2); 
+    log('---Style2---'); 
+    log(a1); 
+    // If the first value is true, the second value is assigned. // &&
+    /* 
+    let x = 100;
+x &&= 5;
+    */
+    let a4 = undefined; 
+    let a5 = a4 || 5; 
+    // a4 ||=5; 
+    log(a5); 
+    /* 
+    If the first value is undefined or null, the second value is assigned.
+    */
+    let a6 = null; 
+    let a7 = a6 ?? 1994; 
+    // a4 ||=5; 
+    log(a7); 
+    doc.getElementById('output1').innerHTML = 'Assignment Operator'; 
+</script>
+</html>
