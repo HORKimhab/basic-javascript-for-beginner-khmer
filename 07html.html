@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Comparision & Logical Operator</title>
+</head>
+<body>
+    <h2>JavaScript Comparision & Logical Operator</h2>
+    <p id="output"></p>
+    <p id="output1"></p>
+    <p id="output2"></p>
+    
+</body>
+    <script>
+        const log = console.log; 
+        const docu = document; 
+        let x1 = 22; 
+        let x2 = '22'; 
+        let x3 = 22; 
+        console.log(typeof x2); 
+        const car = {type:"Fiat", model:"500", color:"white"};
+        // let name_car = car?.name; 
+        // && 
+        if(x1 === x3){
+            // alert('x1 is equal x2');
+            log('x1 is equal x2');
+        }
+        let result = x1 > 12 && x3 >= 100; 
+        // Style 1
+        if(result){
+            docu.getElementById('output').innerHTML = "true"; 
+        }
+
+        // Style 2 with ternary operator
+        result ? docu.getElementById('output1').innerHTML = 'True with ternay opeartory' : log('false'); 
+        // Syntax: 
+        // variablename = (condition) ? value1:value2 
+
+        // let name = car?.name;
+        // document.getElementById("demo").innerHTML = name;    
+        log(car.name); 
+        docu.getElementById('output2').innerHTML = car.name; 
+        
+    </script>
+</html>
