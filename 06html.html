@@ -1,40 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment Operator</title>
 </head>
+
 <body>
     <h3>JavaScript Assignment</h3>
     <p id="output1"></p>
 </body>
 <script>
-    const log = console.log; 
-    const doc = document; 
-    var a1 = 3; 
+    // Video 9
+    const log = console.log;
+    const doc = document;
+    var a1 = 3;
+    a1 = 12;
+    log(a1)
+
     let a2 = 22 + a1; // Simple assignment 
-    a1 **= 2;  // a1 = 3 ** 2 
-    log(a2); 
-    log('---Style2---'); 
-    log(a1); 
+    a1 **= 2;  // a1 = 3 ** 2
+    log(a2);
+    log('---Style2---');
+    log('a1', a1);
+
+    //     ??	Nullish coalescing returns the first argument not nullish	
+    let kh;
+    const string = kh ?? 'Default Value'
+    log('String', string)
+
+    // ?.	Optional chaining returns undefined if an object is undefined or null	
+    const phone = {
+        phoneCode: '855',
+        phoneNumber: '928138383'
+    }
+    const phoneDetail = phone?.detail;
+    log('phoneDetail', phoneDetail)
+
+    // &&=	Logical AND assignment assigns the second value if the first value is true	
+    let isMale = true
+    const age = isMale &&= 2000
+    log('age', age)
+
+    // ||=	Logical OR assignment assigns the second value if the first value is false	
+    let isFemale = false
+    const age1 = isFemale ||= 4000
+    log('age1', age1)
+
+
+    // ??=	Nullish coalescing assignment assigns the second value if the first value is undefined or null
+    let money = null
+    money ??= 1939393
+    log('money', money)
+
     // If the first value is true, the second value is assigned. // &&
-    /* 
+    /*
     let x = 100;
 x &&= 5;
     */
-    let a4 = undefined; 
-    let a5 = a4 || 5; 
-    // a4 ||=5; 
-    log(a5); 
-    /* 
-    If the first value is undefined or null, the second value is assigned.
-    */
-    let a6 = null; 
-    let a7 = a6 ?? 1994; 
-    // a4 ||=5; 
-    log(a7); 
-    doc.getElementById('output1').innerHTML = 'Assignment Operator'; 
+    let a4 = undefined;
+    let a5 = a4 || 5;
+    // a4 ||=5;
+    //     log(a5);
+    //     /*
+    //     If the first value is undefined or null, the second value is assigned.
+    //     */
+    //     let a6 = null;
+    //     let a7 = a6 ?? 1994;
+    //     // a4 ||=5;
+    //     log(a7);
+    //     doc.getElementById('output1').innerHTML = 'Assignment Operator'; 
+
+    // Summary 
+    const value1 = a4 ?? 'default'
+    const value2 = a4 || 'sfsdfsd'
+
 </script>
+
 </html>

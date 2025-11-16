@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript khmer - learn javascript - reduce js</title>
+</head>
+<body>
+  <h1>Check console log</h1>
+</body>
+<script>
+  const dataArray = [22, 12, 45, 1992, 2008]; 
+  const sumData = dataArray.reduce((acc, cur, index, arr) => {
+    console.log('---More about param reduce---'); 
+    console.log(`acc: ${acc}, cur: ${cur}, index: ${index}, arr: ${arr}`);
+
+    return acc + cur; 
+  }, 0)
+
+  console.log(`sumData: ${sumData}`);
+</script>
+</html>
