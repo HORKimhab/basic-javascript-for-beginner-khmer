@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn Javascript Condition with HKimhab</title>
+  <style>
+    body {
+      font-family: system-ui, Arial;
+      padding: 20px;
+      max-width: 800px;
+    }
+
+    .box {
+      padding: 10px;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+
+    .output {
+      background: #f7f7f7;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .green {
+      color: #0a0;
+    }
+
+    .red {
+      color: #a00;
+    }
+  </style>
+  <h1> Learn Javascript Condition with HKimhab</h1>
+
+  <!-- Example 1: Simple Js with checking age -->
+  <section class="box">
+    <h2>1) Simple <code>if</code></h2>
+    <input type="text" id="ageInput" type="number" placeholder="Enter your age " />
+    <button id="checkAge">Check age</button>
+    <div id="ageResult" class="output"></div>
+  </section>
+  <script>
+    // Script Example 1
+    document.getElementById("checkAge").addEventListener('click', function () {
+      const getAgeValue = document.getElementById("ageInput").value
+      const age = parseInt(getAgeValue, 10);
+      const outPut = document.getElementById("ageResult");
+
+      // Condition 
+      if (!Number(isFinite(age))) {
+        outPut.textContent = 'Please enter a number';
+        outPut.className = 'output'
+      }
+
+      /* 
+        condtion js 
+        if else 
+        if elseif elseif elseif elseif ... else
+      */
+
+      // COndition age >= 18 
+      if (age >= 18) {
+        outPut.textContent = "YOu are an adult ✅";
+        outPut.className = 'output green'
+      } else {
+        outPut.textContent = "YOu are a minor ⛔"
+        outPut.className = 'output red'
+      }
+    })
+  </script>
+
+  <!-- Example 2: check password -->
+  <section class="box">
+    <h2>2) <code>if ... else </code>(Login Simluation)</h2>
+    <input type="password" id="pwInput" placeholder="Type password: hkimhabbitcoin123" title="hkimhabbitcoin123" />
+    <button id="loginBtn">Login</button>
+    <div id="loginResult" class="output"></div>
+  </section>
+
+  <script>
+    const loginBtnEle = document.getElementById('loginBtn')
+    loginBtnEle.addEventListener('click', function () {
+      const pw = document.getElementById('pwInput').value;
+      const outPut = document.getElementById('loginResult')
+
+      if (pw === 'hkimhabbitcoin123') {
+        outPut.textContent = 'Welcome back!';
+        outPut.className = 'output green';
+      } else {
+        outPut.textContent = 'Wrong password. Try again with "hkimhabbitcoin123"'
+        outPut.className = 'output red'
+      }
+    })
+  </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
