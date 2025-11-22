@@ -100,6 +100,71 @@
     })
   </script>
 
+  <section class="box">
+    <h2>3) <code>else if</code> (grading)</h2>
+    <input type="number" id="scoreInput" placeholder="Enter score 0-100" />
+    <button id="gradeBtn">Get grade</button>
+    <div id="gradeResult" class="output"></div>
+  </section>
+
+  <script>
+    const gradeBtnEle = document.getElementById('gradeBtn'); 
+    gradeBtnEle.addEventListener('click', function (){
+      const s = document.getElementById('scoreInput').value;
+      console.log('score', s === '');
+      const out = document.getElementById('gradeResult');
+
+      // Validate is not number 
+      if(!Number(isFinite(s)) || s === ''){
+        out.textContent = 'Please enter a valid number';
+        out.className = 'output red';
+        return;
+      }
+
+      if(s >= 90){
+        out.textContent = 'Grade A';
+        out.className = 'output green';
+        return;
+      } else if(s >= 80){
+          out.textContent = 'Grade B'
+      }
+      else if(s >= 70){
+          out.textContent = 'Grade C'
+      }
+      else if(s >= 60){
+          out.textContent = 'Grade D'
+      }
+      else if(s >= 50){
+          out.textContent = 'Grade E'
+      }
+      else {
+        out.textContent = 'Grade F'
+        out.className = 'output red';
+        return
+      }
+      out.className = 'output';
+
+    })
+
+  </script>
+
+  <script>
+    function getFee(isMember) {
+  return isMember ? "$2.00" : "$10.00";
+
+
+}
+
+console.log(getFee(true));
+// Expected output: "$2.00"
+
+console.log(getFee(false));
+// Expected output: "$10.00"
+
+
+  </script>
+
+
 </head>
 
 <body>
