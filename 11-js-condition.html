@@ -36,6 +36,10 @@
     .red {
       color: #a00;
     }
+
+    .output1 {
+      background-color: green;
+    }
   </style>
   <h1> Learn Javascript Condition with HKimhab</h1>
 
@@ -163,7 +167,59 @@ console.log(getFee(false));
 
 
   </script>
+<!-- Example 5: Video 15 -->
+ <section class="box">
+  <h2>5) <code>switch case</code>(weekday)</h2>
+  <select name="selectWeekday" id="daySelect">
+    <option value="0">Sunday</option>
+    <option value="1">Monday</option>
+    <option value="2">Tuesday</option>
+    <option value="3">Wednesday</option>
+    <option value="4">Thursday</option>
+    <option value="5">Friday</option>
+    <option value="6">Saturday</option>
+  </select>
+  <button id="dayBtn">Show plan</button>
+  <div id="dayResult" class="output"></div>
+ </section>
+ <script>
+  document.getElementById("dayBtn").addEventListener("click", function (){
+    const day = document.getElementById("daySelect").value; 
+    const out = document.getElementById("dayResult"); 
 
+    let plan; 
+
+    // Compares with === (value and type condtion)
+    switch(day){
+      case '0':
+        plan = 'Result and plan the week';
+        break; 
+      case '1':
+        plan = 'Work normal with coding';
+        break; 
+      case '2':
+        plan = 'Meeting and coding';
+        break; 
+      case '3':
+        plan = 'Write docs and review code';
+        break; 
+      case '4':
+        plan = 'Coding and research';
+        break; 
+      case '5':
+        plan = 'Merge and push to production';
+        break; 
+      case '6':
+        plan = 'Do freelance and play soccer';
+         out.className = 'output1'
+        break; 
+      default: 
+        plan = "Unknown day"; 
+    }
+    out.textContent = plan; 
+    out.className = 'output output1'
+  });
+ </script>
 
 </head>
 
