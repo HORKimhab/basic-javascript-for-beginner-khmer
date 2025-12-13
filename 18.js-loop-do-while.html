@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Loop - Do...while - learn Javascript with HKImhab</title>
+    <script>
+        // Exccute once before checking condition 
+        let i = 10;
+do {
+  i += 1; // i = i + 1
+  console.log(i);
+} while (i < 5);
+
+
+// Menu simple system 
+
+let choice;
+
+do {
+    choice = prompt("Menu:\n1. Say Hello\n2. Say Bye\n3. Exit");
+
+    // input 12 == choice == 12
+    switch(choice) {
+        case "1":
+            alert("Hello!");
+            break;
+        case "2":
+            alert("Bye!");
+            break;
+        case "3":
+            alert("Exiting menu...");
+            break;
+        default:
+            alert("Invalid choice, try again!");
+    }
+
+} while(choice !== "3");
+    </script>
+
+    
+</head>
+<body>
+    <mark>Check console log</mark>
+    <h2>Welcome for learning do...while js with hkimhab</h2>
+    
+</body>
+</html>
