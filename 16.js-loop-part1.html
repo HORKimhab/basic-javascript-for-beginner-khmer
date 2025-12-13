@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop Javascript - Learn javascript with HKimhab</title>
+    <script>
+//         for (let step = 0; step < 5; step++) {
+//   // Runs 5 times, with values of step 0 through 4.
+//   console.log(`Walking east one step ${step}`);
+// //   console.log(`Walking east one step`);
+// }
+
+    // Video 16- Loop part 2 
+    // Multiple initialization (comma separated)
+    for (let i = 0, j = 10; i < j; i++, j--){
+        console.log(`i = ${i}, j = ${j}`) 
+    }
+
+    let i1 = 0;
+for (; i1 < 5; i1++) {
+  console.log(`Empty initialization ${i1}`);
+}
+
+// No condition (infinite loop)
+// Not recommend for production code
+// for (;;) {
+//   console.log("Infinite loop");
+// }
+
+for (let i2 = 0; i2 < 5;) {
+  console.log(i2);
+  i2++; // moved inside
+}
+    </script>
+</head>
+<body>
+    <h1>Check console log</h1>
+</body>
+</html>
