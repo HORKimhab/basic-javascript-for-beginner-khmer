@@ -15,29 +15,37 @@ do {
 
 // Menu simple system 
 
-let choice;
+// let choice;
 
-do {
-    choice = prompt("Menu:\n1. Say Hello\n2. Say Bye\n3. Exit");
+// do {
+//     // choice = prompt("Menu:\n1. Say Hello\n2. Say Bye\n3. Exit");
 
-    // input 12 == choice == 12
-    switch(choice) {
-        case "1":
-            alert("Hello!");
-            break;
-        case "2":
-            alert("Bye!");
-            break;
-        case "3":
-            alert("Exiting menu...");
-            break;
-        default:
-            alert("Invalid choice, try again!");
-    }
+//     // input 12 == choice == 12
+//     switch(choice) {
+//         case "1":
+//             alert("Hello!");
+//             break;
+//         case "2":
+//             alert("Bye!");
+//             break;
+//         case "3":
+//             alert("Exiting menu...");
+//             break;
+//         default:
+//             alert("Invalid choice, try again!");
+//     }
 
-} while(choice !== "3");
+// } while(choice !== "3");
+
+// Charge phone battery simulation
+let batteryLevel = 20; 
+while (batteryLevel <= 100) {
+    console.log(`Battery level: ${batteryLevel}%`);
+    batteryLevel += 20;
+}
     </script>
 
+<!-- text += "The number is " + i; == text = text + "The number is " + i -->
     
 </head>
 <body>
