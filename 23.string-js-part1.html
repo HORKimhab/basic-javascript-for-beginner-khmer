@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>រៀន Javascript - Basic concept javascript part 1 - html form</title>
+</head>
+
+<body>
+  <h1>rean-it.com</h1>
+  <h2>Signup form on rean-it.com</h2>
+
+  <form action="#" id="signup">
+    <label for="">Full Name: </label>
+    <input type="text" name="name" id="name" /><br /><br />
+
+    <label for="">Email:</label>
+    <input type="text" name="email" id="email" /><br /><br />
+
+    <label for="">Password:</label>
+    <input type="password" name="password" id="password" /><br /><br />
+
+    <button type="submit">Sign up</button>
+  </form>
+  <p id="message"></p>
+
+  <script>
+    document.getElementById("signup").addEventListener("submit", function (e) {
+      e.preventDefault();
+      // alert("Hello Universe")
+      let name = document.getElementById("name").value;
+      let email = document.getElementById("email").value;
+      let password = document.getElementById("password").value;
+      const message = document.getElementById("message");
+
+      message.innerText = "This\"s name:" + name + 'This\'s email:' + email + password;
+
+      const passwordToObj = new String(password);
+      console.info(passwordToObj);
+      console.info(password);
+      // ==, === (value & type)
+      console.info(passwordToObj === password);
+      // Back tick string: `${var1}${var2}`
+      // message.innerText = `name:${name}email:${email}password${password}`;
+
+
+
+    })
+  </script>
+</body>
+
+</html>
