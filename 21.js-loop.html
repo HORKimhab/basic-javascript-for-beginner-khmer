@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript loop - For...in and for...of javascript</title>
+
+  <h2>For...in and for...of loop javascript - check console.log</h2>
+  <script>
+    // Now you're learning for...in and for...of javascript
+    console.log('Now you\'re learning for...in and for...of javascript');
+
+    const responseAba = {
+      "req_time": "20250312095439",
+      "merchant_id": "keng.dara.online",
+      "tran_id": "20250311033231",
+      "first_name": "ABA",
+      "last_name": "Bank",
+      "email": "aba.bank@gmail.com",
+      "phone": "012345678",
+      "amount": 0.01,
+      "purchase_type": "purchase",
+      "payment_option": "abapay_khqr",
+      "items": "W3sibmFtZSI6IicgVU5JT04gU0VMRUNUIG51bGwsIHZlcnNpb24oKSwgbnVsbCAtLSIsInF1YW50aXR5IjozLCJwcmljZSI6MTAwLjAxfV0=",
+      "currency": "USD",
+      "callback_url": "aHR0cHM6Ly9hcGkuY2FsbGJhY2suY29tL25vdGlmeQ==",
+      "return_deeplink": null,
+      "custom_fields": null,
+      "return_params": null,
+      "payout": null,
+      "lifetime": 6,
+      "qr_image_template": "template3_color",
+      "hash": "ZyDmMe/kznbY2e...ZB6tMnqv57V06T13du8807dcbPTg=="
+    }
+
+    for (let key in responseAba) {
+      console.log(`${key}: ${responseAba[key]}`)
+    }
+
+    console.log('Result of for...of');
+    const abaPaymentOptions = [
+      'cards',
+      'abapay_khqr',
+      'abapay_khqr_deeplink',
+      'alipay',
+      'wechat',
+      'google_pay'
+    ]
+
+    console.log('There are aba payment of options:')
+    for (const paymentOption of abaPaymentOptions) {
+      console.log(paymentOption)
+    }
+
+
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
